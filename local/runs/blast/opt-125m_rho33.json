@@ -1,0 +1,1144 @@
+{
+  "method": "blast",
+  "model": "facebook/opt-125m",
+  "rho_target": 0.33,
+  "dense": false,
+  "seed": 42,
+  "num_blocks": 16,
+  "num_iter": 300,
+  "delta": 0.1,
+  "target_matrices": 72,
+  "target_achieved_compression_ratio": 0.3302951388888889,
+  "params_before": {
+    "total_params": 125239296,
+    "linear_params": 123543552
+  },
+  "params_after": {
+    "total_params": 68358144,
+    "linear_params": 66662400
+  },
+  "realised_total_ratio": 0.5458202511773941,
+  "realised_linear_ratio": 0.5395862343345932,
+  "compress_seconds": 138.1658574930625,
+  "ppl": {
+    "wikitext2": 4874.6998103571805,
+    "ptb": 5645.944878202965,
+    "c4": 3797.7085510693937
+  },
+  "ppl_tokens": {
+    "wikitext2": 286580,
+    "ptb": 96209,
+    "c4": 524032
+  },
+  "per_matrix": [
+    {
+      "name": "model.decoder.layers.0.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.4318193197250366,
+      "decomposition_time_seconds": 1.744712668005377
+    },
+    {
+      "name": "model.decoder.layers.0.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5863364934921265,
+      "decomposition_time_seconds": 0.9436405290616676
+    },
+    {
+      "name": "model.decoder.layers.0.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.4649709463119507,
+      "decomposition_time_seconds": 0.9482655200408772
+    },
+    {
+      "name": "model.decoder.layers.0.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.4938962757587433,
+      "decomposition_time_seconds": 0.9462170590413734
+    },
+    {
+      "name": "model.decoder.layers.0.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5298264622688293,
+      "decomposition_time_seconds": 3.579765841946937
+    },
+    {
+      "name": "model.decoder.layers.0.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5933603048324585,
+      "decomposition_time_seconds": 3.8409677769523114
+    },
+    {
+      "name": "model.decoder.layers.1.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.3843255639076233,
+      "decomposition_time_seconds": 0.9821040290407836
+    },
+    {
+      "name": "model.decoder.layers.1.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5699576139450073,
+      "decomposition_time_seconds": 0.9980254940455779
+    },
+    {
+      "name": "model.decoder.layers.1.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.4206446409225464,
+      "decomposition_time_seconds": 0.9618990150047466
+    },
+    {
+      "name": "model.decoder.layers.1.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.47380948066711426,
+      "decomposition_time_seconds": 1.0027381079271436
+    },
+    {
+      "name": "model.decoder.layers.1.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5852533578872681,
+      "decomposition_time_seconds": 3.574207996018231
+    },
+    {
+      "name": "model.decoder.layers.1.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6085684299468994,
+      "decomposition_time_seconds": 3.8345064859604463
+    },
+    {
+      "name": "model.decoder.layers.2.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5278838872909546,
+      "decomposition_time_seconds": 0.9536646920023486
+    },
+    {
+      "name": "model.decoder.layers.2.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5815027952194214,
+      "decomposition_time_seconds": 0.9416040420765057
+    },
+    {
+      "name": "model.decoder.layers.2.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5314295887947083,
+      "decomposition_time_seconds": 0.9636252879863605
+    },
+    {
+      "name": "model.decoder.layers.2.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5736601948738098,
+      "decomposition_time_seconds": 0.9990195200080052
+    },
+    {
+      "name": "model.decoder.layers.2.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5523054003715515,
+      "decomposition_time_seconds": 3.579623944940977
+    },
+    {
+      "name": "model.decoder.layers.2.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6006496548652649,
+      "decomposition_time_seconds": 3.855999890016392
+    },
+    {
+      "name": "model.decoder.layers.3.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5321453809738159,
+      "decomposition_time_seconds": 1.0075991250341758
+    },
+    {
+      "name": "model.decoder.layers.3.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5897674560546875,
+      "decomposition_time_seconds": 0.9683871070155874
+    },
+    {
+      "name": "model.decoder.layers.3.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5375505685806274,
+      "decomposition_time_seconds": 0.9875087511027232
+    },
+    {
+      "name": "model.decoder.layers.3.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5926496982574463,
+      "decomposition_time_seconds": 1.0048776849871501
+    },
+    {
+      "name": "model.decoder.layers.3.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5347658395767212,
+      "decomposition_time_seconds": 3.585052500013262
+    },
+    {
+      "name": "model.decoder.layers.3.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5452712178230286,
+      "decomposition_time_seconds": 3.8411677790572867
+    },
+    {
+      "name": "model.decoder.layers.4.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5654774904251099,
+      "decomposition_time_seconds": 0.9497777970973402
+    },
+    {
+      "name": "model.decoder.layers.4.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5934475064277649,
+      "decomposition_time_seconds": 0.9620499929878861
+    },
+    {
+      "name": "model.decoder.layers.4.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5667750835418701,
+      "decomposition_time_seconds": 1.003916266025044
+    },
+    {
+      "name": "model.decoder.layers.4.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.6030579209327698,
+      "decomposition_time_seconds": 1.0056617290247232
+    },
+    {
+      "name": "model.decoder.layers.4.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5972970128059387,
+      "decomposition_time_seconds": 3.573746900074184
+    },
+    {
+      "name": "model.decoder.layers.4.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6046165227890015,
+      "decomposition_time_seconds": 3.8914159149862826
+    },
+    {
+      "name": "model.decoder.layers.5.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5530959963798523,
+      "decomposition_time_seconds": 0.9655911639565602
+    },
+    {
+      "name": "model.decoder.layers.5.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5982635617256165,
+      "decomposition_time_seconds": 0.9553287919843569
+    },
+    {
+      "name": "model.decoder.layers.5.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5621746182441711,
+      "decomposition_time_seconds": 0.9947331820148975
+    },
+    {
+      "name": "model.decoder.layers.5.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.605806827545166,
+      "decomposition_time_seconds": 0.9737304659793153
+    },
+    {
+      "name": "model.decoder.layers.5.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6178895235061646,
+      "decomposition_time_seconds": 3.6326458930270746
+    },
+    {
+      "name": "model.decoder.layers.5.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5996718406677246,
+      "decomposition_time_seconds": 3.8524036530870944
+    },
+    {
+      "name": "model.decoder.layers.6.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5620086193084717,
+      "decomposition_time_seconds": 1.0120026209624484
+    },
+    {
+      "name": "model.decoder.layers.6.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.588123619556427,
+      "decomposition_time_seconds": 1.0065341900335625
+    },
+    {
+      "name": "model.decoder.layers.6.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5640274286270142,
+      "decomposition_time_seconds": 0.9946030710125342
+    },
+    {
+      "name": "model.decoder.layers.6.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5947513580322266,
+      "decomposition_time_seconds": 1.0053665459854528
+    },
+    {
+      "name": "model.decoder.layers.6.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6188316345214844,
+      "decomposition_time_seconds": 3.576848871074617
+    },
+    {
+      "name": "model.decoder.layers.6.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.5953262448310852,
+      "decomposition_time_seconds": 3.8361012670211494
+    },
+    {
+      "name": "model.decoder.layers.7.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5696844458580017,
+      "decomposition_time_seconds": 0.9415413429960608
+    },
+    {
+      "name": "model.decoder.layers.7.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5920870900154114,
+      "decomposition_time_seconds": 0.9480436519952491
+    },
+    {
+      "name": "model.decoder.layers.7.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5703212022781372,
+      "decomposition_time_seconds": 0.9711541429860517
+    },
+    {
+      "name": "model.decoder.layers.7.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5937215685844421,
+      "decomposition_time_seconds": 0.9467972329584882
+    },
+    {
+      "name": "model.decoder.layers.7.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.619669497013092,
+      "decomposition_time_seconds": 3.5760635010665283
+    },
+    {
+      "name": "model.decoder.layers.7.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6008453369140625,
+      "decomposition_time_seconds": 3.8337337939301506
+    },
+    {
+      "name": "model.decoder.layers.8.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5632583498954773,
+      "decomposition_time_seconds": 0.9865567319793627
+    },
+    {
+      "name": "model.decoder.layers.8.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.605326235294342,
+      "decomposition_time_seconds": 0.9428925720276311
+    },
+    {
+      "name": "model.decoder.layers.8.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5582230091094971,
+      "decomposition_time_seconds": 0.9664993589976802
+    },
+    {
+      "name": "model.decoder.layers.8.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.6021758913993835,
+      "decomposition_time_seconds": 0.9676073050359264
+    },
+    {
+      "name": "model.decoder.layers.8.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6212525963783264,
+      "decomposition_time_seconds": 3.5873093840200454
+    },
+    {
+      "name": "model.decoder.layers.8.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6043203473091125,
+      "decomposition_time_seconds": 4.053098253905773
+    },
+    {
+      "name": "model.decoder.layers.9.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5615211725234985,
+      "decomposition_time_seconds": 1.0634180619381368
+    },
+    {
+      "name": "model.decoder.layers.9.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.6091256141662598,
+      "decomposition_time_seconds": 1.0242099789902568
+    },
+    {
+      "name": "model.decoder.layers.9.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5596442818641663,
+      "decomposition_time_seconds": 1.0599586539901793
+    },
+    {
+      "name": "model.decoder.layers.9.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.6049408912658691,
+      "decomposition_time_seconds": 1.0543458909960464
+    },
+    {
+      "name": "model.decoder.layers.9.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6202605366706848,
+      "decomposition_time_seconds": 3.772058209986426
+    },
+    {
+      "name": "model.decoder.layers.9.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6135650873184204,
+      "decomposition_time_seconds": 4.069244393031113
+    },
+    {
+      "name": "model.decoder.layers.10.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.57244873046875,
+      "decomposition_time_seconds": 1.041786617017351
+    },
+    {
+      "name": "model.decoder.layers.10.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.6079045534133911,
+      "decomposition_time_seconds": 1.0478523999918252
+    },
+    {
+      "name": "model.decoder.layers.10.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5714848041534424,
+      "decomposition_time_seconds": 1.0419655080186203
+    },
+    {
+      "name": "model.decoder.layers.10.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.6026046872138977,
+      "decomposition_time_seconds": 1.0082732430892065
+    },
+    {
+      "name": "model.decoder.layers.10.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6170747876167297,
+      "decomposition_time_seconds": 3.577538996003568
+    },
+    {
+      "name": "model.decoder.layers.10.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.616277813911438,
+      "decomposition_time_seconds": 3.8473886100109667
+    },
+    {
+      "name": "model.decoder.layers.11.self_attn.k_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5435922741889954,
+      "decomposition_time_seconds": 1.007835088064894
+    },
+    {
+      "name": "model.decoder.layers.11.self_attn.v_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5990994572639465,
+      "decomposition_time_seconds": 1.0027039219858125
+    },
+    {
+      "name": "model.decoder.layers.11.self_attn.q_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5400999188423157,
+      "decomposition_time_seconds": 0.9919085339643061
+    },
+    {
+      "name": "model.decoder.layers.11.self_attn.out_proj",
+      "shape": [
+        768,
+        768
+      ],
+      "rank": 109,
+      "dense_parameter_count": 589824,
+      "compressed_parameter_count": 195328,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3311631944444444,
+      "relative_frobenius_error": 0.5738628506660461,
+      "decomposition_time_seconds": 0.9889639880275354
+    },
+    {
+      "name": "model.decoder.layers.11.fc1",
+      "shape": [
+        3072,
+        768
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6098921298980713,
+      "decomposition_time_seconds": 3.576700882986188
+    },
+    {
+      "name": "model.decoder.layers.11.fc2",
+      "shape": [
+        768,
+        3072
+      ],
+      "rank": 190,
+      "dense_parameter_count": 2359296,
+      "compressed_parameter_count": 778240,
+      "requested_compression_ratio": 0.33,
+      "achieved_matrix_ratio": 0.3298611111111111,
+      "relative_frobenius_error": 0.6123679280281067,
+      "decomposition_time_seconds": 3.841886800946668
+    }
+  ],
+  "baseline": "BLAST",
+  "dtype": "float16",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060",
+  "package_versions": {
+    "python": "3.12.3",
+    "torch": "2.14.0+cu130",
+    "transformers": "4.45.2",
+    "datasets": "5.0.1",
+    "accelerate": "1.15.0",
+    "lm_eval": null
+  },
+  "last_updated": "2026-09-23T14:06:48",
+  "requested_compression_ratio": 0.33,
+  "dense_eval": {
+    "ppl": {
+      "wikitext2": 27.650931930003416,
+      "ptb": 38.98557060970799,
+      "c4": 26.560311449640277
+    },
+    "accuracy": null
+  },
+  "compressed_eval": {
+    "ppl": {
+      "wikitext2": {
+        "ppl": 4874.6998103571805,
+        "tokens": 286580,
+        "dense_ppl": 27.650931930003416,
+        "ppl_increase": 4847.048878427177,
+        "ppl_increase_percent": 17529.42320605025
+      },
+      "ptb": {
+        "ppl": 5645.944878202965,
+        "tokens": 96209,
+        "dense_ppl": 38.98557060970799,
+        "ppl_increase": 5606.959307593257,
+        "ppl_increase_percent": 14382.13990433948
+      },
+      "c4": {
+        "ppl": 3797.7085510693937,
+        "tokens": 524032,
+        "dense_ppl": 26.560311449640277,
+        "ppl_increase": 3771.1482396197534,
+        "ppl_increase_percent": 14198.433805153396
+      }
+    },
+    "accuracy": null
+  },
+  "dense_target_parameter_count": 123543552,
+  "dense_non_target_parameter_count": 1695744,
+  "dense_total_parameter_count": 125239296,
+  "compressed_target_parameter_count": 66662400,
+  "compressed_total_parameter_count": 68358144,
+  "dense_target_mb": 235.640625,
+  "dense_non_target_mb": 3.234375,
+  "dense_total_mb": 238.875,
+  "compressed_target_mb": 127.1484375,
+  "compressed_total_mb": 130.3828125,
+  "artifact_storage_mb": 127.1484375,
+  "static_parameter_storage_mb": 3.234375,
+  "total_model_storage_mb": 130.3828125,
+  "storage": {
+    "artifact_storage_mb": 127.1484375,
+    "static_parameter_storage_mb": 3.234375,
+    "total_model_storage_mb": 130.3828125
+  },
+  "dense_ppl": {
+    "wikitext2": 27.650931930003416,
+    "ptb": 38.98557060970799,
+    "c4": 26.560311449640277
+  },
+  "dense_ppl_tokens": {
+    "wikitext2": 286580,
+    "ptb": 96209,
+    "c4": 524032
+  },
+  "ppl_increase": {
+    "wikitext2": 4847.048878427177,
+    "ptb": 5606.959307593257,
+    "c4": 3771.1482396197534
+  },
+  "ppl_increase_percent": {
+    "wikitext2": 17529.42320605025,
+    "ptb": 14382.13990433948,
+    "c4": 14198.433805153396
+  },
+  "layers_evaluated": 12,
+  "matrices_evaluated": 72,
+  "artifact_bits_per_compressed_parameter": 16.0,
+  "total_model_bits_per_parameter": 16.0,
+  "model_load_seconds": 0.3124811190646142,
+  "artifact_load_seconds": 0.0,
+  "reconstruction_seconds": 138.1658574930625,
+  "metric_seconds": 60.255642410949804,
+  "inference_seconds": 60.255642410949804,
+  "dense_inference_seconds": 62.05996124900412,
+  "total_seconds": 198.77381836506538,
+  "peak_cpu_rss_mb": 2069.296875,
+  "peak_cpu_rss_increase_mb": 1523.3125,
+  "peak_cuda_allocated_mb": 852.1865234375,
+  "peak_cuda_reserved_mb": 1442.0
+}
