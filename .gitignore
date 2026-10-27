@@ -163,3 +163,40 @@ cython_debug/
 
 .DS_Store
 tags
+
+# ---------------------------------------------------------------------------
+# Generated data, results, and plots (run_local.sh output).
+#
+# Deliberately NOT blanket patterns here: this repo vendors
+# lm-evaluation-harness, which tracks 23 .pkl test fixtures, 2 .png doc images,
+# 342 .json and 2129 .yaml task configs. Ignoring those extensions would keep
+# the files tracked but make later edits invisible to git status, so generated
+# output is excluded by LOCATION instead.
+# ---------------------------------------------------------------------------
+.venv-*/
+local/runs/
+local/logs/
+local/plots/
+local/.spill/
+results/
+plots/
+
+# Safe to match anywhere: zero tracked files carry these extensions.
+*.pdf
+*.svg
+*.csv
+*.jsonl
+*.npz
+*.npy
+*.pt
+*.safetensors
+
+# A core dump holds whatever was in memory, including any HF_TOKEN.
+core.*
+*.core
+
+# scratch copies and throwaway probes written while patching
+*.bak
+*.bak[0-9]
+*.orig
+.probe_*.py
