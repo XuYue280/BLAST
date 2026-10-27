@@ -14,7 +14,14 @@
 #   RUNS_DIR=<dir>    default ./local/runs/blast
 #   LOG_DIR=<dir>     default ./local/logs
 #   GPUS=<list>       default 0
-#   BLAST_NUM_BLOCKS  default 16   (upstream's default; "block size 16x16")
+#   BLAST_NUM_BLOCKS  default 4    UPSTREAM'S PUBLISHED VALUE, not its argparse
+#                     default of 16. scripts/decompose_llama.sh -- the script that
+#                     produced the paper's llama-7b numbers -- passes --num_blocks 4.
+#                     Measured 2026-10-11 on real Llama-3.2-1B weights: nb=4 and
+#                     nb=16 give the same reconstruction error (q_proj 0.1886 vs
+#                     0.1835, k_proj 0.2141 vs 0.2155) but nb=4 decomposes 4.2x
+#                     faster (44s vs 185s on q_proj). Quality is a wash, speed is
+#                     not, and 4 is what the paper used.
 #   BLAST_NUM_ITER    default 300  (upstream's default)
 #   BLAST_DELTA       default 0.1  (upstream's default)
 #   EXTRA_ARGS        appended to the python call (e.g. --dense)
@@ -97,14 +104,14 @@ run_one() {
   mkdir -p "$RUNS_DIR" "$LOG_DIR"
   echo "=========================================================="
   echo "[run_local] method=$METHOD model=$model rho=$rho"
-  echo "[run_local] num_blocks=${BLAST_NUM_BLOCKS:-16} num_iter=${BLAST_NUM_ITER:-300}"
+  echo "[run_local] num_blocks=${BLAST_NUM_BLOCKS:-4} num_iter=${BLAST_NUM_ITER:-300}"
   echo "[run_local] out=$out"
   echo "[run_local] log=$logf"
   nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
   echo "=========================================================="
   ( cd "$HERE" && "$VENV/bin/python" "$HERE/local/run_blast.py" \
       --model "$model" --rho "$rho" --seed "$SEED" \
-      --num-blocks "${BLAST_NUM_BLOCKS:-16}" \
+      --num-blocks "${BLAST_NUM_BLOCKS:-4}" \
       --num-iter "${BLAST_NUM_ITER:-300}" \
       --delta "${BLAST_DELTA:-0.1}" \
       --out "$out" ${EXTRA_ARGS:-} 2>&1 | tee "$logf" )
